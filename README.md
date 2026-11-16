@@ -8,6 +8,17 @@ subspaces and gives the number of observations needed for a target reproducibili
 It complements [sigPCA](https://github.com/guillermodeandajauregui/sigPCA) (CRAN), which tests which eigenvalues
 are significant, and takes the same input.
 
+**Significant is not reproducible.** In three large breast-cancer cohorts, 45 to 69 components pass the
+Marchenko–Pastur test, but only 3 to 7 are recovered with overlap ≥ 0.9 from two halves of the same cohort.
+`stabPCA` predicts which ones without resampling.
+
+| | significance of eigenvalues | per-component reproducibility | mixing subspaces | sample size | no resampling |
+|---|---|---|---|---|---|
+| sigPCA, PCAtools (`chooseMarchenkoPastur`) | yes | no | no | no | yes |
+| bootstrap of loadings (bootSVD, multivarious) | no | yes | no | no | no |
+| split-half matching (SHEM) | no | yes | no | no | no |
+| **stabPCA** | yes | yes | yes | yes | yes |
+
 ## Installation
 
 ```r
