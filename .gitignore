@@ -1,0 +1,8 @@
+.Rhistory
+.RData
+*.Rcheck/
+*.tar.gz
+_build/
+*.aux
+*.log
+*.out

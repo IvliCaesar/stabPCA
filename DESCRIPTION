@@ -1,0 +1,19 @@
+Package: stabPCA
+Title: Reproducibility of Principal Components from the Eigenvalue Spectrum
+Version: 0.1.0
+Authors@R: c(
+    person("César", "Galindo", email = "jcgalindo@up.edu.mx", role = c("aut", "cre")),
+    person("Enrique", "Hernández-Lemus", role = "aut"))
+Description: Predicts which principal components of a correlation matrix are reproducible, from the
+    eigenvalue spectrum alone. The fluctuation of a sample eigenvector is a sum of inverse squared
+    eigenvalue gaps (Anderson, 1963) <doi:10.1214/aoms/1177704248>; it gives the expected overlap between
+    components computed on two halves of the data, groups components that mix into subspaces, and gives
+    the number of observations needed for a target reproducibility. Complements the significance tests
+    of the 'sigPCA' package, whose input it accepts.
+License: MIT + file LICENSE
+URL: https://github.com/IvliCaesar/stabPCA
+BugReports: https://github.com/IvliCaesar/stabPCA/issues
+Encoding: UTF-8
+Depends: R (>= 3.5.0)
+Imports: stats, graphics
+Suggests: sigPCA

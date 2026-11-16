@@ -1,0 +1,5 @@
+export(stabPCA)
+export(splithalf_overlaps)
+export(bbp_population)
+S3method(print, stabPCA)
+S3method(plot, stabPCA)
